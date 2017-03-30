@@ -135,7 +135,7 @@
         public function updateCharacter() {
             $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             
-            // If a new picture has been added, update with the new picture. Otherwise, update with the old picture.
+            // If there is an age, update it with the age. Otherwise omit the age.
             if (isset($age)) {
                 $query = "UPDATE character_info SET first_name = '$this->first_name', last_name = '$this->last_name', middle_name = '$this->middle_name', nick_name = '$this->nick_name', alias = '$this->alias', gender = '$this->gender', age = '$this->age', motivation = '$this->motivation', occupation = '$this->occupation', eye_color = '$this->eye_color', hair_color = '$this->hair_color', height = '$this->height', other_appearance = '$this->other_appearance' WHERE character_id = '$this->character_id'";
             }
