@@ -35,22 +35,21 @@
         // Get profile data from form
         $bio = mysqli_real_escape_string($dbc, trim($_POST['bio']));
         $gender = mysqli_real_escape_string($dbc, trim($_POST['gender']));
-        $error = false;
         
-            $new_user = new User;
-            $new_user->setBio($bio);
-            $new_user->setGender($gender);
-            $new_user->setOld_picture($old_picture);
-            $new_user->setNew_picture($new_picture);
+        $new_user = new User;
+        $new_user->setBio($bio);
+        $new_user->setGender($gender);
+        $new_user->setOld_picture($old_picture);
+        $new_user->setNew_picture($new_picture);
             
-            // Update user info on the database
-            $new_user->updateUser();
+        // Update user info on the database
+        $new_user->updateUser();
             
-            mysqli_close($dbc);
+        mysqli_close($dbc);
             
-            // Return user to viewuser.php
-            $return_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/viewuser.php?user_id=' . $_SESSION['user_id'];
-            header('Location: ' . $return_url);
+        // Return user to viewuser.php
+        $return_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/viewuser.php?user_id=' . $_SESSION['user_id'];
+        header('Location: ' . $return_url);
     }
     else {
         // Get profile information from database
