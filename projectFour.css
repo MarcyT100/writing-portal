@@ -1,0 +1,77 @@
+/* External Style Sheet for Project 4
+   Author:  Marcella Thompson
+   Date:     11/10/2016
+*/
+
+header, footer, nav, section, article, aside {
+        display: block;  
+}
+
+body {
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+span.centerButton {
+    display: block;
+    width: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span.introText {
+    margin: 2em;
+    width: 30%;
+    float: left;
+    display: block;
+}
+
+span.searchBar {
+    margin: 2em;
+    width: 60%;
+    float: left;
+    display: block;
+}
+
+table.searchResults {
+    margin-top: 2em;
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.basicInfo {
+    margin: 1em;
+    padding: 3em;
+    width: 20%;
+    float: left;
+}
+
+section.bigInfo {
+    margin: 1em;
+    padding: 3em;
+    width: 75%;
+    float: left;
+}
+
+section.moreInfo {
+    padding: 2em;
+    width: 25%;
+    float: left;
+}
+
+section.userInfo {
+    clear: both;
+    padding: 2em;
+}
+
+section.halfDescription {
+    width: 50%;
+    float: left;
+    padding-left: 2em;
+}
+
+section.testClass {
+    width: 20%;
+}
