@@ -50,27 +50,25 @@
         $error = false;
         $character_id = mysqli_real_escape_string($dbc, trim($_POST['character_id']));
         
-            $new_character = new Character;
-            $new_character->setFirst_name($first_name);
-            $new_character->setMiddle_name($middle_name);
-            $new_character->setLast_name($last_name);
-            $new_character->setNick_name($nick_name);
-            $new_character->setAlias($alias);
-            $new_character->setGender($gender);
-            $new_character->setAge($age);
-            $new_character->setMotivation($motivation);
-            $new_character->setOccupation($occupation);
-            $new_character->setEye_color($eye_color);
-            $new_character->setHair_color($hair_color);
-            $new_character->setHeight($height);
-            $new_character->setOther_appearance($other_appearance);
-            $new_character->setCharacter_id($character_id);
+        $new_character = new Character;
+        $new_character->setFirst_name($first_name);
+        $new_character->setMiddle_name($middle_name);
+        $new_character->setLast_name($last_name);
+        $new_character->setNick_name($nick_name);
+        $new_character->setAlias($alias);
+        $new_character->setGender($gender);
+        $new_character->setAge($age);
+        $new_character->setMotivation($motivation);
+        $new_character->setOccupation($occupation);
+        $new_character->setEye_color($eye_color);
+        $new_character->setHair_color($hair_color);
+        $new_character->setHeight($height);
+        $new_character->setOther_appearance($other_appearance);
+        $new_character->setCharacter_id($character_id);
             
-            // Update character data in the database
-            $new_character->updateCharacter();
-            
-        
-    
+        // Update character data in the database
+        $new_character->updateCharacter();
+
         mysqli_close($dbc);
         
         // Return user to viewcharacter.php
